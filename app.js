@@ -9,25 +9,30 @@ const oneEuroIs = {
     "GBP": 0.8, // British pound
 };
 
-const fromEuroToDollar = (monto) => {
-    let dollarvalue = 1.2
+const valorEuro = 1
+const valorDollar = 1.2
+const valorYen = 127.9
+const valorPound = 0.8
+
+const fromEuroToDollar = () => {
+    let dollarvalue = valorEuro * valorDollar
     return dollarvalue 
 }
-console.log(fromEuroToDollar(1));
+console.log(fromEuroToDollar(2));
 
-const fromDollarToYen = (monto) => {
-    let Yenvalue = 1*127.9
+const fromDollarToYen = () => {
+    let Yenvalue = valorDollar * valorYen
     return Yenvalue 
 }
-console.log(fromDollarToYen(2));
+console.log(fromDollarToYen());
 
-const fromYenToPound = (monto) => {
-    let Poundvalue = 0.8
+const fromYenToPound = () => {
+    let Poundvalue = valorYen * valorPound
     return Poundvalue 
 }
-console.log(fromYenToPound(1))
+console.log(fromYenToPound())
 
 
 
 
-module.exports = { sum };
+module.exports = { sum , fromDollarToYen , fromEuroToDollar , fromYenToPound };
